@@ -1,4 +1,7 @@
 #produs = 1
+import sys
+from pkgutil import get_data
+from subprocess import STARTUPINFO
 
 #for i in range(5):
 #   produs + produs * (i+1)
@@ -125,4 +128,174 @@ test_name = "voltageCheck"
 #
 # print(f"Test {test_name} finished in {duration:.2f} ")
 
-print (test_name.upper())
+# print (test_name.upper())
+# afisarea mesajului cu litere mici
+#print (test_name.lower())
+
+# exercitiu- presupunem ca avem o comanda
+
+# command = "StaRt"
+#
+# if command == "start":
+#     print ("Starting system")
+#
+# if command.lower() == "start":
+#     print ("Starting system")
+
+
+# word = "Python"
+#
+# print(word[0])
+# print(word[3])
+#
+# print(word[-1])
+
+# text = "programming"
+#
+# print(text[0:6])
+# print(text[:4])
+#
+# print(text[4:])
+
+# pentru afisarea lungimii caracterelor
+# message = "Hello Python"
+# print(len(message))
+
+#  concatenarea unui mesaj
+# a= "Hello"
+# b= "World"
+#
+# print (a +" "+ b)
+
+
+# avem un mesaj de eroare care se defineste..
+
+# raw = "   ERROR_CODE_12 "
+# print(raw)
+# # strip - curata spatiile din mesaj
+# clean_string = raw.strip()
+# print(clean_string)
+
+
+
+# metoda replace-
+
+# log = "Voltage=12,5V"
+# #  float 12.5 <- 12.5
+# print(log)
+# #  folosim metoda replace
+# log = log.replace( ",", ".")
+# print(log)
+
+# selectarea fisierelor cu extensia log
+# sdsdsd.txt
+# sdsd.exe
+#  file.log
+
+filename = "report_2025.log"
+
+# if filename.endswith(".log"):
+#     print ("Log file detected")
+
+# if filename.startswith("report"):
+#     print ("Report file detected")
+
+
+# find - cauta un cuvant intr-un text si intraorce indexul lui, daca nu gaseste intoarce -1
+# message = "CAN timeout detected"
+#
+# index = message.find("timeout")
+# print(index)
+#
+# index = message.find("exit")
+# print(index)
+
+# cautarea intr-un sir de caractere prin in sau find
+# in vs find
+# Timeout_flag = False
+#
+# if "timeout" in message:
+#     timeout_flag = True
+#     print("timeout found!")
+
+
+# metoda split(), imparte un text
+
+# data = "12.5, 3.7, OK"
+# print(data)
+# values = data.split(",")
+# print(values)
+
+# join este operatia inversa a split-ului
+# my_string = [ "Ana ", "are ", "mere ", "!"]
+# print(my_string)
+# final_string = "".join(my_string)
+# print(final_string)
+
+# parts = ["C", "logs", "2026", "run_01.txt"]
+# path ="/".join(parts)
+# print(path)
+
+
+#  Password Generator
+#  avem nevoie de a genera aleator un sir de caractere
+# import random
+#
+# s= "Ana are mere!"
+# s_random = random.sample(s,3)
+# print(s_random)
+
+# facem un generator de parola
+# lower = "abcdefghijklmnoprstuvwxyz"
+# upper = "ABCDEFGHIJKLMNOPRSTUVWXYZ"
+# numbers = "0123456789"
+# symbols = "!@#$%^&*()?"
+#
+# all_string = lower + upper + numbers + symbols
+# # print(all_string)
+#
+# lenght = 16
+# import random
+# password = "".join(random.sample(all_string, lenght))
+# print(password)
+
+
+#  exercitiu- avem nevoie de un input de la utilizator. Cu imput preluam date de la utilizator.
+# Function Input
+# a=""
+# while a !="STOP":
+#     a = input("Add data: ")
+#     print(a)
+#
+# print("The user stopped entering the data!")
+
+# Liste
+
+# my_list = [70, 5, -7, 50, -7, 20.5, True, "Ana are mere", 4+7j]
+# print(my_list)
+#
+# print(my_list[0])
+# print(my_list[-1])
+
+# print(len(my_list))
+
+# sliced_list = my_list[:6]
+# print(sliced_list)
+
+# print(my_list[-3])
+
+
+# cu input vom crea o baza de date
+
+db=[]
+print(db)
+
+get_data= ""
+
+while get_data != "Stop":
+    get_data = input("Add data: ")
+    if get_data !="Stop": db.append(get_data)
+
+print (db)
+
+
