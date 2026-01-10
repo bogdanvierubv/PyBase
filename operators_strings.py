@@ -287,15 +287,15 @@ filename = "report_2025.log"
 
 # cu input vom crea o baza de date
 
-db=[]
-print(db)
-
-get_data= ""
-
-while get_data != "Stop":
-    get_data = input("Add data: ")
-    if get_data !="Stop": db.append(get_data)
-
-print (db)
+# db=[]
+# print(db)
+#
+# get_data= ""
+#
+# while get_data != "Stop":
+#     get_data = input("Add data: ")
+#     if get_data !="Stop": db.append(get_data)
+#
+# print (db)
 
 
