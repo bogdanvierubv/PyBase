@@ -1,5 +1,6 @@
 from copy import replace
 from itertools import count
+from shlex import join
 
 raw_logs= [ " ERROR | Voltage too LOW | code=E12 ", "info | System started successfully ",
            " WARNING | High temperature detected | code=W07 ", " ERROR | Communication timeout | code=E99 ",
@@ -28,7 +29,7 @@ raw_logs_final=(clean_string1.lower().split("|") + clean_string2.lower().split("
                 clean_string5.lower().split("|"))
 print(raw_logs_final)
 
-list="".join(raw_logs_final)
+list=",".join(raw_logs_final)
 print(list)
 
 if "error" in list:
@@ -54,6 +55,9 @@ c=list.count("info")
 print(c)
 
 # 5 task
+
+
+
 
 
 
