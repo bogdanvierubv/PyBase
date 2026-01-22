@@ -10,6 +10,8 @@ counts_errors= []
 counts_warnings= []
 counts_infos= []
 
+error_codes = []
+warning_codes = []
 
 # 1 task
 clean_string1 = raw_logs[0].strip().lower()
@@ -68,11 +70,17 @@ for i in range(len(raw_logs)):
     if raw_logs[i][0].startswith("error"):
         # print("error detected!")
         counts_errors.append(raw_logs[i][0].strip())
+        error_code_list = raw_logs[i][2].split("=")[1].upper()
+        error_codes.append(error_code_list)
+
     # if "error" in raw_logs[i][0]:
     #     print("error found!")
     if raw_logs[i][0].startswith("warning"):
         # print("warning detected!")
         counts_warnings.append(raw_logs[i][0].strip())
+        warning_code_list = raw_logs[i][2].split("=")[1].upper()
+        warning_codes.append(warning_code_list)
+
     if raw_logs[i][0].startswith("info"):
         # print("info detected!")
         counts_infos.append(raw_logs[i][0].strip())
@@ -93,6 +101,9 @@ for i in range(len(raw_logs)):
 # c=list.count("info")
 # print(c)
 #
+
+
+
 summary = f"""
 OUTPUT
 LOG SUMMARY
@@ -103,7 +114,7 @@ Warnings    : {counts_warnings.count('warning')}
 Info        : {counts_infos.count('info')}
 
 
-Error Codes : E12, E99
-Warning Codes: W07
+Error Codes : {error_codes}
+Warning Codes: {warning_codes}
 """
 print(summary)
