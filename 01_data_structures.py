@@ -31,7 +31,7 @@
 # print(tuplu2[1][3][2][1])
 #  END TUPLES
 
-#  SETS - data structure - sunt o grupare de elemente unice, sturile nu au o ordine, si nu au index, putem adauga operatii intr-un set
+#  SETS - data structure - sunt o grupare de elemente unice, seturile nu au o ordine, si nu au index, putem adauga operatii intr-un set
 # {3, 4, 100, 200, 5, 9, 0}
 
 # var2 = {3, 4, 10, 0}
@@ -79,7 +79,7 @@ str3 = ')(*&^%$#$##@%^^&!)#%@%^%$#'
 
 list3 = ["adrian", "client", "studenti"]
 list4 = [str1, str2, str3]
-print(list4)
+# print(list4)
 
 # task: split all the strings in our them using the ";" character.
 #  example: "LOG: Hello this is Vlad Impaler." -> ["LOG", "Hello this is Vlad Impaler"]
@@ -93,11 +93,11 @@ print(list4)
 # functia len ne afiseaza lungimea listei
 # print(list(range(len(list4))))
 
-# for i in range(len(list4)):
-    # print(i)
-    # print(list4[i])
-list4[i] = list4[i].split(":")
-    print(list4[i])
+for i in range(len(list4)):
+     # print(i)
+     print(list4[i])
+     list4[i] = list4[i].split(":")
+     print(list4[i])
 
 
     # print("=========")
