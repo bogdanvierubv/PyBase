@@ -48,13 +48,9 @@ even_list = []
 
 
 for n in list1:
-
         if is_even(n):
-
             even_list.append(n)
-
         else:
-
             odd_list.append(n)
 
 # print(odd_list)
